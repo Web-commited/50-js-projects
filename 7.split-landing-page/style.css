@@ -1,0 +1,98 @@
+:root{
+    --split-left-color:rgba(43,43,43,0.8);
+    --hover-width:80%;
+    --other-width:20%;
+}
+
+*{
+    box-sizing: border-box;
+}
+  
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background-color: #333;
+}
+
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.split.left{
+    left: 0;
+}
+.split.left::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--split-left-color);
+}
+.split.right::before{
+    content: '';
+    background-color: var(--split-right-color);
+}
+
+
+.split.right{
+    right: 0;
+}
+
+h1{
+    color: white;
+    font-size: 4rem;
+    left: 50%;
+    top: 20%;
+    position: absolute;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 40%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transform: translateX(-50%);
+    border: #fff solid 0.2rem;
+    width: 15rem;
+    padding: 1rem;
+    transition: 0.2s ease;
+}
+.btn:hover{
+    color: #333;
+    background-color: #fff;
+}
+
+.hover-left .left{
+    width: var(--hover-width);
+}
+.hover-left .right{
+    width: var(--other-width);
+    opacity: 0.5;
+}
+.hover-right .left{
+    width: var(--other-width);
+    opacity: 0.5;
+}
+.hover-rightt .right{
+    width: var(--hover-width);
+}
+
+.split.left,.split.left::before,.split.right,.split.right::before{
+    transition: all 0.4s ease-in-out;
+}
