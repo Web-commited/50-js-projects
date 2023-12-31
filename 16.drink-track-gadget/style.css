@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #333;
+  transition: background-image 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.background{
+    background-color: rgba(161, 246, 255, 0.752);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    height: 0%;
+    bottom: 0;
+    transition: height 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.container{
+    background-color: #444;
+    height: 300px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    
+}
+.cup{
+    padding: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    outline: none;
+    height: 100px;
+    width: 90px;
+    transition:all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.cup.active{
+    height: 110px;
+}
+.cupText{
+    color: #fff;
+    position: absolute;
+    top:10%;
+}
+
+.fa-solid.fa-glass-water{
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.fa-solid.fa-glass-water.fa-4x.fa-bounce{
+    color: rgba(161, 246, 255, 0.752);
+} 
